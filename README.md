@@ -93,6 +93,32 @@ var result =  inn.applyMethod("ts_update_ContainerActuals_info","<userid>"+useri
                    ).getResult();
 ps.更新紀錄會在裝櫃實績頁籤顯示
 
+# 取得櫃型列表(下拉式列表) : ts_get_Container_Type_List
+使用方法 : 
+            <!-- Parameter : no -->
+            Return : 
+                    Success : 櫃型 (string ,分割)
+                    Fail : Error Message (string) 
+ex.
+var cntr_noList =  inn.applyMethod("ts_get_Container_Type_List").getResult();
+ps. 回傳列表為櫃型標籤
+
+# 取得櫃型標籤 : ts_get_container_type_label
+使用方法 : 
+            Parameter : 該櫃型的值 
+            Return : 
+                    Success : 櫃型的標籤 (string)) 
+ex.
+var the_cntrType_label = inn.applyMethod("ts_get_container_type_label","<thevalue>"+thevalue+"</thevalue>").getResult();
+
+# 取得櫃型值 : ts_get_container_type_value
+使用方法 : 
+            Parameter : 該櫃型的標籤
+            Return : 
+                    Success : 櫃型的值 (string)) 
+ex.
+var the_cntrType_value = inn.applyMethod("ts_get_container_type_value","<thelabel>"+thelabel+"</thelabel>").getResult();
+
 
 
 
